@@ -67,3 +67,10 @@ spec:
   - protocol: TCP
     port: 1433
     targetPort: 1433
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: mssql
+data:
+  SA_PASSWORD: bWVnYV9zZWNyZXRfa2V5   
