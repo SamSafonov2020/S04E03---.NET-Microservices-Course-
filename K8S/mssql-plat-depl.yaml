@@ -12,14 +12,18 @@ spec:
       labels:
         app: mssql
     spec:
+      terminationGracePeriodSeconds: 30
+      hostname: mssqlinst
+      securityContext:
+        fsGroup: 10001    
       containers:
         - name: mssql
-          image: mcr.microsoft.com/mssql/server:2017-latest
+          image: mcr.microsoft.com/mssql/server:2019-latest
           ports:
             - containerPort: 1433
           env:
           - name: MSSQL_PID
-            value: "Express"
+            value: "Developer"
           - name: ACCEPT_EULA
             value: "Y"
           - name: SA_PASSWORD
@@ -28,7 +32,7 @@ spec:
                 name: mssql
                 key: SA_PASSWORD
           volumeMounts:
-          - mountPath: /var/opt/mssql/data
+          - mountPath: /var/opt/mssql
             name: mssqldb
       volumes:
       - name: mssqldb
