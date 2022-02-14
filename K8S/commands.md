@@ -19,7 +19,8 @@ FLANNEL_IPMASQ=true
 3. Save the file and create the pod again. It should saw the runnign status now.
 
 
-
+```
 - kubectl -n <namespace-name> describe pod <pod name>
 
 kubectl -n <namespace-name> logs -p  <pod name> 
+```
