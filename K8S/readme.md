@@ -46,20 +46,20 @@ spec:
 ```
 ```
 apiVersion: apps/v1
-kind: Deployment (дипломник)
+kind: Deployment (дипломник в опере)
 metadata: (имя в whatsUp. Так как meta это бывший facebook)
   name: commands-depl
 spec:
   replicas: 1 (реплика на сцене)
-  selector: (селекторное совещание)
-    matchLabels: (желтые карточки за матч)
-      app: commandservice (арбитр)
-  template:
-    metadata:
-      labels:
+  selector: (селекторное совещание, обсуждение)
+    matchLabels: (гарчичники)
+      app: commandservice 
+  template: (кафе, тарелки)
+    metadata: (страничка в facebook )
+      labels: (отзывы)
         app: commandservice
     spec:
-      containers: (контейнеры: может быть пищевым пластиковым или 20 тонник)
+      containers: (контейнеры: может быть пищевым пластиковым)
         - name: commandservice (ФИО)
           image: SamSafonov2020/commandservice:latest (фото)
 ```
