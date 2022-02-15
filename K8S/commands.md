@@ -38,3 +38,16 @@ https://github.com/microsoft/mssql-docker/issues/615
 chmod 777 test
 
 
+
+Namespace:
+---
+
+- Создадим неймспейс:
+
+kubectl create namespace msvc-ns
+
+
+- Установим его как текущий:
+
+kubectl config set-context --current --namespace=msvc-ns
+
